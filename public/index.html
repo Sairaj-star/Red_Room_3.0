@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0712"><title>Red Room | Reception</title><link rel="stylesheet" href="/css/app.css">
+</head><body><main class="shell">
+<section class="hero-card"><div class="brand"><span class="dot"></span>RED ROOM</div><div class="hero-content">
+<p class="eyebrow">THE PRIVATE CHAT HOTEL</p><h1>Welcome to the<br><span>Red Room.</span></h1>
+<p class="muted">500 private rooms. One key. No public profiles.</p><button id="enterBtn" class="primary big">Enter Reception</button></div></section>
+<section id="reception" class="panel hidden"><div class="step-title"><span class="step">01</span><div><h2>Choose your role</h2><p>Guests can enter without an account. Owner access is separate.</p></div></div>
+<div class="role-grid"><button class="role-card" data-role="customer"><span class="role-icon">◈</span><b>Customer</b><small>Choose or join a room</small></button>
+<button class="role-card" data-role="owner"><span class="role-icon">◆</span><b>Owner</b><small>Private management desk</small></button></div></section>
+<section id="rooms" class="panel hidden"><div class="toolbar"><div><p class="eyebrow">RECEPTION</p><h2>Choose a room</h2><p class="muted">500 rooms are available across the hotel.</p></div><button id="joinKeyBtn" class="ghost">I have a key</button></div><div id="roomGrid" class="room-grid"></div></section>
+<section id="booking" class="panel hidden"><div class="toolbar"><div><p class="eyebrow">ROOM <span id="bookingRoomNo"></span></p><h2>Check-in details</h2></div><button class="ghost backBtn">Back</button></div>
+<form id="bookingForm" class="form"><label>Your name<input id="name" maxlength="60" required pattern="[A-Za-z ]+" placeholder="Letters and spaces only"></label>
+<label>Mobile number<input id="phone" maxlength="10" inputmode="numeric" required pattern="\d{10}" placeholder="10 digits"></label>
+<label>How many people are taking this room?<input id="capacity" type="number" min="1" max="50" value="2" required></label>
+<button class="primary">Book Room & Get Key</button><p id="bookingError" class="error"></p></form></section>
+<section id="keyPanel" class="panel hidden center"><p class="eyebrow">ROOM KEY ISSUED</p><h2>Your 9-character key</h2><div id="newKey" class="key-box"></div>
+<p class="muted">Share this key with the people you want to invite. They only need the key to enter.</p><button id="continueRoom" class="primary">Enter My Room</button></section>
+<section id="joinPanel" class="panel hidden"><div class="toolbar"><div><p class="eyebrow">INVITATION</p><h2>Enter your room key</h2></div><button class="ghost backBtn">Back</button></div>
+<form id="joinForm" class="form"><label>Room number<input id="joinRoom" type="number" min="1" max="500" required placeholder="Example: 17"></label>
+<label>9-character key<input id="joinKey" maxlength="9" required autocapitalize="characters" placeholder="XXXXXXXXX"></label><button class="primary">Unlock Room</button><p id="joinError" class="error"></p></form></section>
+<section id="ownerLogin" class="panel hidden"><div class="toolbar"><div><p class="eyebrow">PRIVATE DESK</p><h2>Owner access</h2></div><button class="ghost backBtn">Back</button></div>
+<form id="ownerForm" class="form"><label>Email<input id="ownerEmail" type="email" required></label><label>Password<input id="ownerPassword" type="password" required></label>
+<button class="primary">Enter Owner Desk</button><p id="ownerError" class="error"></p></form></section>
+</main><script src="/js/index.js"></script></body></html>

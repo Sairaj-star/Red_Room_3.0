@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0712"><title>Red Room | Chat</title><link rel="stylesheet" href="/css/app.css"><script src="/socket.io/socket.io.js"></script></head>
+<body class="chat-page"><header class="chat-header"><div><div class="brand"><span class="dot"></span>RED ROOM</div><small id="roomTitle">Room</small></div>
+<div class="header-actions"><span id="occupancy" class="pill"></span><button id="exitBtn" class="danger">Exit</button></div></header>
+<main class="chat-layout"><aside class="room-info"><div class="mini-card"><span class="eyebrow">ROOM KEY</span><b id="roomKey"></b><button id="copyKey" class="ghost">Copy</button></div>
+<div class="mini-card"><span class="eyebrow">PEOPLE</span><div id="peopleList"></div></div>
+<div class="mini-card"><span class="eyebrow">PRIVACY</span><p>Guests are represented by anonymous room labels. Only people with the room key can join while a seat is available.</p></div></aside>
+<section class="chat-card"><div id="messages" class="messages" aria-live="polite"></div><div class="typing"></div>
+<form id="composer" class="composer" autocomplete="off"><input id="messageInput" maxlength="4000" placeholder="Write a message..." aria-label="Message">
+<input id="mediaInput" type="file" accept="image/*,video/*" hidden><button type="button" id="mediaBtn" class="icon-btn" title="Image or video">＋</button>
+<button type="button" id="voiceBtn" class="icon-btn" title="Record voice note">🎙</button><button class="send" type="submit">Send</button></form>
+<div id="recordingBar" class="recording hidden"><span class="record-dot"></span><span>Recording…</span><button id="stopRecording" class="ghost">Stop & Send</button></div>
+<p id="roomError" class="error room-error"></p></section></main><script src="/js/room.js"></script></body></html>
